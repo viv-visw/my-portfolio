@@ -45,10 +45,13 @@ Over the course of the efforts, I worked on:
 
 * Iteratively improving the overall quality of the research paper by frequently collecting and incorporating feedback from my lab supervisor and teammates.
 
-![deepbipolar-arch](/images/Image1.jpg)
-![deepbipolar-training](/images/Image2.jpg)
-![deepbipolar-metrics](/images/Image3.jpg)
-![deepbipolar-graphs](/images/Image4.jpg)
+![deepbipolar-arch](images/Image1.jpg) 
+
+![deepbipolar-training](images/Image2.jpg)  
+
+![deepbipolar-metrics](images/Image3.jpg)  
+
+![deepbipolar-graphs](images/Image4.jpg)
 
 
 
