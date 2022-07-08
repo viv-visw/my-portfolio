@@ -1,3 +1,5 @@
+![utah](images/utah.png)
+
 # **DeepBipolar**: Identifying genomic mutations for bipolar disorder via deep learning
 
 ## Background
