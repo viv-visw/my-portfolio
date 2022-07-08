@@ -2,22 +2,17 @@
 
 ## Background
 
----
-
 DeepBipolar was the solution to the 2017 [“Bipolar Exomes” challenge](http://www.genomeinterpretation.org/cagi4-bipolar.html) conducted by the [Critical Assessment of Genome Interpretation 4](http://www.genomeinterpretation.org/cagi4-challenge.html). Proposed by the NSF Centre for Big Learning at the University of Florida, DeepBipolar was the most successful model submitted to the challenge, as per the assessments of the official assessors.
 
 
 
 ## Problem Statement
 
----
-
 Based on the dataset provided by the organisers, the Bipolar Exomes challenge involved identifying and distinguishing individuals who were affected by bipolar disorder from the unaffected. Within the realm of machine learning, this constituted a “supervised classification” learning problem.  
 
 
   
 ## My Contributions
----
 
 Over the course of the efforts, I worked on:
 
