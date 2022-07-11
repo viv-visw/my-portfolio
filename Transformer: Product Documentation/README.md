@@ -10,7 +10,7 @@ This project is intended to showcase my experience, understanding, and _general_
 
 ## Highlights
 
-This documentation describes the [Transformer model](/The%20Transformer%20Model/Project%20README.md), a popular class of deep learning models, and provides information on how these models function, how they are used, and resources for further reading: 
+This documentation describes the [Transformer model](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/README.md), a popular class of deep learning models, and provides information on how these models function, how they are used, and resources for further reading: 
 * Getting Started
 * How-to Guides
 * Important Concepts

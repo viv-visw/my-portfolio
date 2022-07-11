@@ -20,8 +20,8 @@
 This page provides detailed information about all the concepts related to Transformers that are important for understanding and using Transformers for different real-world natural language processing (NLP)applications such as text classification or machine translation.
 
 > ✅ **NOTE**  
-> 1. If you already understand the basics of Transformers and just want to implement your first Transformer model in code and run it, see [Transformers: Getting Started](/The%20Transformer%20Model/Getting%20Started.md) instead.
-> 2. If you already understand the theoretical concepts behind Transformers and are trying to understand how to use them for certain applications, you might want to check [How To Use Transformers for Translation](/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md) instead.
+> 1. If you already understand the basics of Transformers and just want to implement your first Transformer model in code and run it, see [Transformers: Getting Started](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Getting%20Started.md) instead.
+> 2. If you already understand the theoretical concepts behind Transformers and are trying to understand how to use them for certain applications, you might want to check [How To Use Transformers for Translation](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md) instead.
 
 
 
@@ -76,7 +76,7 @@ This section will briefly revisit the main concepts behind the attention mechani
 
 ### ***Sequence-to-Sequence Models***
 
-![seq2seq](/The%20Transformer%20Model/images/seq2seq.png)
+![seq2seq](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/seq2seq.png)
 > Figure 1: The encoder-decoder model. The visualization of both encoder and decoder is unrolled in time.
 
 The [seq2seq](https://arxiv.org/abs/1409.3215) model was born in the field of language modeling. Broadly speaking, it aims to transform an input sequence (source) to a new one (target) and both sequences can be of arbitrary lengths. Examples of transformation tasks include machine translation between multiple languages in either text or audio, question-answer dialog generation, or even parsing sentences into grammar trees.
@@ -104,7 +104,7 @@ While the context vector has access to the entire input sequence, we don’t nee
 * decoder hidden states;
 * alignment between source and target.
 
-![attention](/The%20Transformer%20Model/images/attention.png)
+![attention](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/attention.png)
 > Figure 2: The encoder-decoder model with additive attention mechanism.
 
 
@@ -112,17 +112,17 @@ The encoder is a bidirectional RNN with forward and hidden states. A simple conc
 
 The decoder network has hidden state **s** for the output word at position t, t=1,...,_m_, where the context vector **c** is a sum of hidden states of the input sequence, weighted by alignment scores, as follows:
 
-![context](/The%20Transformer%20Model/images/context.png)
+![context](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/context.png)
 
 The alignment model assigns a score  to the pair of input at position i and output at position t, based on how well they match. The set of $\alpha$<sub>(_t_,_i_)</sub> are weights defining how much of each source hidden state should be considered for each output. In Bahdanau’s paper, the alignment score  is parametrized by a feed-forward network with a single hidden layer and this network is jointly trained with other parts of the model. The score function is therefore in the following form, given that tanh is used as the non-linear activation function:
 
-![scoring](/The%20Transformer%20Model/images/scoring.png)
+![scoring](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/scoring.png)
 
 where both **v** and **W** are weight matrices to be learned in the alignment model.
 
 The matrix of alignment scores is a nice byproduct to explicitly show the correlation between source and target words.
 
-![align-matrix](/The%20Transformer%20Model/images/alignment%20matrix.png)
+![align-matrix](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/alignment%20matrix.png)
 
 > Figure 3 Alignment matrix of "L'accord sur l'Espace économique européen a été signé en août 1992" (French) and its English translation "The agreement on the European Economic Area was signed in August 1992". 
 
@@ -143,10 +143,10 @@ There are 3 critical steps in self-attention:
 2) Normalize weights via softmax, as shown in Figure 4
 3) Compute attention value from normalized weights and corresponding inputs, as shown in Figure 5
 
-![self-att2](/The%20Transformer%20Model/images/self-att2.png)
+![self-att2](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/self-att2.png)
 > Figure 4: **self-attention** derived as a weighted sum
 
-![self-att1](/The%20Transformer%20Model/images/self-att1.png)
+![self-att1](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/self-att1.png)
 > Figure 5: The Self-Attention Mechanism
 
 
@@ -156,23 +156,23 @@ A key point to note in the basic form of [Self-Attention](#self-attention) we sa
 
 We, therefore, add 3 trainable weight matrices that are multiplied with the input sequence embeddings:
 
-![key-value-query](/The%20Transformer%20Model/images/kvq.png)
+![key-value-query](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/kvq.png)
 
 Here, the encoded representation of the input are viewed as a set of key-value pairs, (**K**, **V**) , both of dimension  (input sequence length). Both the keys and values are the encoder hidden states. In the decoder, the previous output is compressed into a query **Q** (of dimension _m_) and the next output is produced by mapping this query and the set of keys and values.
 
 The output is a weighted sum of the values, where the weight assigned to each value is determined by the dot-product of the query with all the keys, as shown below in Figure 6:
 
-![kvq-scores](/The%20Transformer%20Model/images/kvq-scores.png)
+![kvq-scores](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/kvq-scores.png)
 > Figure 6: The Softmax Weighted Scoring mechanism
 
 In the original [Transformer paper](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf), the transformer adopts the scaled dot-product attention instead: 
 
-![scaled-self-att](/The%20Transformer%20Model/images/scaled-self-att.png)
+![scaled-self-att](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/scaled-self-att.png)
 
 
 ### ***Multi-Head Attention***
 
-![multi-head-att](/The%20Transformer%20Model/images/multi-head-att.png)
+![multi-head-att](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/multi-head-att.png)
 
 The core idea behind multi-head attention simply extends the self-attention mechanism we learnt in the [Self-Attention Without RNNs](#self-attention-without-rnns) section:
 
@@ -188,7 +188,7 @@ Now that we have seen all the building blocks of the Transformer model, we will 
 
 ### ***Encoder***
 
-![trans-encoder](/The%20Transformer%20Model/images/trans-encoder.png)
+![trans-encoder](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/trans-encoder.png)
 
 The encoder generates an attention-based representation with capability to locate a specific piece of information from a potentially infinitely-large context.
 
@@ -198,6 +198,8 @@ The encoder generates an attention-based representation with capability to locat
 * All the sub-layers output data of the same dimension _d<sub>model</sub>_ = 512.
 
 ### ***Decoder***
+
+![trans-encoder](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/trans-decoder.png)
 
 The decoder is able to retrieval from the encoded representation.
 
@@ -220,7 +222,7 @@ The decoder is able to retrieval from the encoded representation.
 
 ### ***Full Architecture***
 
-![trans-arch](/The%20Transformer%20Model/images/trans-arch.png)
+![trans-arch](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/trans-arch.png)
 > Figure 7 The Transformer architecture
 
 Finally, here is the complete view of the transformer’s architecture:
