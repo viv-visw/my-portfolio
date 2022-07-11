@@ -7,6 +7,10 @@
 This project is intended to showcase my experience, understanding, and _general_ style of creating product documentation. 
 
 
+> **✅ NOTE** 
+>The information architecture style of this documentation is inspired by the [Divio Documentation Style](https://documentation.divio.com/), attributed to Daniele Procida (at PyCon Australia 2017).
+
+
 
 ## Highlights
 
