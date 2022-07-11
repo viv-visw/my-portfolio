@@ -17,6 +17,7 @@ This documentation describes the [Transformer model](/The%20Transformer%20Model/
 * References
 
 
+
 ## Author Notes
 
 * I have only used Markdown for this documentation (and no other tools)
