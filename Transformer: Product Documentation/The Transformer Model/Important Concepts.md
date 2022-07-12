@@ -27,12 +27,12 @@ This page provides detailed information about all the concepts related to Transf
 
 ### Scope
 
-This page aims to answer the following questions about the transformer model in detail:
+This page aims to answer the following questions about the Transformer model in detail:
 
-* What is the transformer model?
-* Which theoretical concepts are transformers based on?
+* What is the Transformer model?
+* Which theoretical concepts are Transformers based on?
 * Why is it more successful than traditional sequence-to-sequence (seq2seq) deep learning models?
-* How does the theoretical deisgn of the transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
+* How does the theoretical deisgn of the Transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
 
 
 
@@ -165,7 +165,7 @@ The output is a weighted sum of the values, where the weight assigned to each va
 ![kvq-scores](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/kvq-scores.png)
 > Figure 6: The Softmax Weighted Scoring mechanism
 
-In the original [Transformer paper](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf), the transformer adopts the scaled dot-product attention instead: 
+In the original [Transformer paper](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf), the Transformer adopts the scaled dot-product attention instead: 
 
 ![scaled-self-att](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/scaled-self-att.png)
 
@@ -225,7 +225,7 @@ The decoder is able to retrieval from the encoded representation.
 ![trans-arch](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/images/trans-arch.png)
 > Figure 7 The Transformer architecture
 
-Finally, here is the complete view of the transformer’s architecture:
+Finally, here is the complete view of the Transformer’s architecture:
 
 * Both the source and target sequences first go through embedding layers to produce data of the same dimension _d<sub>model</sub>_ = 512.
 * To preserve the position information, a sinusoid-wave-based positional encoding is applied and summed with the embedding output. Sinusoidal positional encoding is a vector of small values (constants) added to the embeddings. As a result, same word will have slightly different embeddings depending on where they occur in the sentence.
@@ -234,7 +234,7 @@ Finally, here is the complete view of the transformer’s architecture:
 
 ### ***Why Transformers Succeed***
 
-There are two key reasons why transformers succeed:
+There are two key reasons why Transformers succeed:
 
 1. The self-attention mechanism allows encoding long-range dependencies.
 2. The architecture's inherent self-supervision allows leveraging large unlabeled datasets, which spans most real-world datasets.

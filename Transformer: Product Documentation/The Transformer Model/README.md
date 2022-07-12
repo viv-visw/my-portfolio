@@ -6,10 +6,10 @@
 
 The [Transformer Model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) is based on the idea of applying "attention" to only a handful of details to complete a particular task while discarding the rest.   
 
-Conceptually, it is based on the idea of mimicking the human cognitive process of selectively focusing only on specific parts of any information resource, compared to the rest, to solve a problem. From machine translation to natural language processing tasks and beyond, transformer models have come to redefine the state-of-the-art across several machine learning (ML) research domains and continue to enable spectacular breakthroughs within the broader artificial intelligence community. Therefore, this project aims to explain:
+Conceptually, it is based on the idea of mimicking the human cognitive process of selectively focusing only on specific parts of any information resource, compared to the rest, to solve a problem. From machine translation to natural language processing tasks and beyond, Transformer models have come to redefine the state-of-the-art across several machine learning (ML) research domains and continue to enable spectacular breakthroughs within the broader artificial intelligence community. Therefore, this project aims to explain:
 
-* what the transformer model is
-* how the transformer model works
+* what the Transformer model is
+* how the Transformer model works
 * all important details you would need to gain a useful intuition
 * some technical implmementations to solve specific real-world tasks
 
@@ -17,12 +17,12 @@ Conceptually, it is based on the idea of mimicking the human cognitive process o
 
 ## Scope
 
-This project aims to answer the following questions about the transformer model:
+This project aims to answer the following questions about the Transformer model:
 
-* What is the transformer model?
+* What is the Transformer model?
 * Why is it more successful than traditional sequence-to-sequence (seq2seq) deep learning models?
-* How does the theoretical deisgn of the transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
-* How can I use the transformer model to solve a particular task?
+* How does the theoretical deisgn of the Transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
+* How can I use the Transformer model to solve a particular task?
 
 
 
@@ -30,7 +30,7 @@ This project aims to answer the following questions about the transformer model:
 
 At the end of this documentation, you will have a clear understanding of:
 
-* what the transformer model is and why it is significant
+* what the Transformer model is and why it is significant
 * why this model performs better than traditional seq2seq deep learning models
 * how you can build this model for your task
 

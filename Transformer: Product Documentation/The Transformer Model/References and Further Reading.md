@@ -19,7 +19,9 @@ This page lists all the different resources you would need to correctly and effe
 
 * Book: [Francois Chollet. 2021. Deep Learning with Python (2nd. ed.). Manning Publications Co., USA.](https://www.manning.com/books/deep-learning-with-python-second-edition)
 
-* Course: [Introduction to Deep Learning (STAT453) by Sebastian Raschka](https://sebastianraschka.com/blog/2021/dl-course.html#l19-self-attention-and-transformer-networks)
+* Courses: 
+  * [Introduction to Deep Learning (STAT453) by Sebastian Raschka](https://sebastianraschka.com/blog/2021/dl-course.html#l19-self-attention-and-transformer-networks)
+  * [Stanford CS25: Transformers United](https://web.stanford.edu/class/cs25/)  
 
 * Blog: [Attention? Attention!](https://lilianweng.github.io/posts/2018-06-24-attention/#whats-wrong-with-seq2seq-model)
 
