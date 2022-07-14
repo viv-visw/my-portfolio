@@ -237,7 +237,7 @@ print(f"Test acc: {model.evaluate(int_test_ds)[1]:.3f} %")
 
 ## Result
 
-If everything goes right (fingers crossed!), then you should an output with very similar performance to the following output:
+If everything goes right (fingers crossed!), then you should see an output with performance very similar to the following output:
 
 > Test acc: 88.3%
 
