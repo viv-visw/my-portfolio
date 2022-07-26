@@ -1,5 +1,3 @@
-![utah](images/spirals.png)
-
 # **DeepCancer**: Detecting Cancer via Deep Generative Learning Through Gene Expressions
 
 
@@ -31,11 +29,11 @@ Over the course of the efforts, I worked on:
 
 * Collaborating with the peer reviewers of the journal and communicating all the incorporated feedback and suggestions.
 
-![deepcancer-arch](images/Image1.png)
+![deepcancer-arch](/DeepCancer%20Research%20Project/images/Image1.png)
 
-![deepcancer-training](images/Image2.png)  
+![deepcancer-training](/DeepCancer%20Research%20Project/images/Image2.png)  
 
-![deepcancer-metrics](images/Image3.png)  
+![deepcancer-metrics](/DeepCancer%20Research%20Project/images/Image3.png)  
 
 
 ## Impact

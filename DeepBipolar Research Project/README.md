@@ -1,5 +1,3 @@
-![utah](images/utah.png)
-
 # **DeepBipolar**: Identifying genomic mutations for bipolar disorder via deep learning
 
 ## Background
@@ -43,13 +41,13 @@ Over the course of the efforts, I worked on:
 
 * Iteratively improving the overall quality of the research paper by frequently collecting and incorporating feedback from my lab supervisor and teammates.
 
-![deepbipolar-arch](images/Image1.jpg) 
+![deepbipolar-arch](/DeepBipolar%20Research%20Project/images/Image1.jpg) 
 
-![deepbipolar-training](images/Image2.jpg)  
+![deepbipolar-training](/DeepBipolar%20Research%20Project/images/Image2.jpg)  
 
-![deepbipolar-metrics](images/Image3.jpg)  
+![deepbipolar-metrics](/DeepBipolar%20Research%20Project/images/Image3.jpg)  
 
-![deepbipolar-graphs](images/Image4.jpg)
+![deepbipolar-graphs](/DeepBipolar%20Research%20Project/images/Image4.jpg)
 
 
 ## Impact
