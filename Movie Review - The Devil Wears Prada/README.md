@@ -5,7 +5,7 @@
 
 ## Background
 
-I love movies! It is genuinely fascinating to see how multiple creative minds come together to give shape to their collective vision and narrate a story, regardless of its genre. Besides, over the years, my lived experiences across multiple countries, I can now appreciate the beauty in nuance. In other words, I can appreciate the minutiae of moviemaking, especially the cinematography, screenplay, and above all, background score. This motivated me to analyse movies that I've loved in the past or ones that recently captivated me in one way or another. _The Devil Wears Prada_ is one such movie that I always found intriguing, since it's based on the fashion industry - something that's quite far removed from my work experience.
+I love movies! It is genuinely fascinating to see how multiple creative minds come together to give shape to their collective vision and narrate a story, regardless of its genre. Besides, over the years, my lived experiences across multiple countries enable me to appreciate the beauty in nuance. In other words, I can appreciate the minutiae of moviemaking, especially the cinematography, screenplay, and above all, background score. This motivated me to analyse movies that I've loved in the past or ones that recently captivated me in one way or another. _The Devil Wears Prada_ is one such movie that I always found intriguing, since it's based on the fashion industry - something that's quite far removed from my work experience.
 
 
 ## My Contributions
