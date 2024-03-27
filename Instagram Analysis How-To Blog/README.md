@@ -15,9 +15,9 @@ How can businesses leverage different Instagram marketing strategies, tailored t
   
 ## My Contributions
 
-I wrote the entire article :P
+Well, I wrote the entire article :P
 
-Just kidding! Here are the main highlights:
+Here are the main highlights:
 
 - I tried to highlight the Instagram features that were the newest at the time
 
