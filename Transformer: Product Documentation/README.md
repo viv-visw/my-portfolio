@@ -31,7 +31,7 @@ This documentation describes the [Transformer model](/Transformer%3A%20Product%2
   * Documentation look and feel.
   * Colour schemes.
   * etc.
-* I have used British English standards and grammar for this project. 
+* I have used **British English** standards and grammar for this project. 
 * Generally speaking, I can create product documentation conforming to different English standards, as per business need.
 
 
