@@ -3,7 +3,7 @@
 
 ## Overview
 
-This article explains how you use Transformers for the task of machine translation and see them in action! To gain a deeper understanding of how Transformers work, see the [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md) section.  
+This article explains how you use Transformers for the task of machine translation and see them in action! To gain a deeper understanding of how Transformers work, see the [How Do Transformers Work?](Important%20Concepts.md) section.  
 
 In this tutorial, as an illustration of a Natural Language Processing (NLP) task, you will work on a machine translation problem of translating English sentences into Spanish. The dataset you will use for this task are the English-Spanish sentence pairs from the [Tatoeba Project](https://www.manythings.org/anki/).
 
@@ -383,4 +383,4 @@ When I ran this model and sampled some results from the Transformer translation 
 
 Congratulations on successfully translating English to Spanish sentences using the Transformer model! 
 
-If you are still curious about Transformers and would like to learn more about these models, check out the [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md) section.
+If you are still curious about Transformers and would like to learn more about these models, check out the [How Do Transformers Work?](Important%20Concepts.md) section.
