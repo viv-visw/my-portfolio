@@ -20,9 +20,7 @@ This documentation describes the [Transformer model](The%20Transformer%20Model/R
 
 * I have only used Markdown for this documentation (and no other tools)
 
-* The documentation would look different if I'd have used Confluence, Jupyter Notebooks, or Sphinx. 
-
-* Some examples:
+* The documentation would look different had I used Confluence, Jupyter Notebooks, or Sphinx, especially the following aspects:
 
   * Confluence macros.
 
