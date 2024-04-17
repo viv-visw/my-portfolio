@@ -3,7 +3,7 @@
 
 ## Background
 
-DeepCancer was the outcome of an investigative study focused on understanding the effectiveness of [generative adversarial networks (GANs)](https://en.wikipedia.org/wiki/Generative_adversarial_network) and deep [convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) in the bioinformatics domain.
+DeepCancer was the outcome of an investigative study focused on understanding the effectiveness of [generative adversarial networks (GANs)](https://proceedings.neurips.cc/paper_files/paper/2014/file/5ca3e9b122f61f8f06494c97b1afccf3-Paper.pdf) and deep [convolutional neural networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) in the bioinformatics domain.
 
 
 ## Problem Statement
@@ -29,11 +29,11 @@ Over the course of the efforts, I worked on:
 
 * Collaborating with the peer reviewers of the journal and communicating all the incorporated feedback and suggestions.
 
-![deepcancer-arch](/DeepCancer%20Research%20Project/images/Image1.png)
+![deepcancer-arch](images/Image1.png)
 
-![deepcancer-training](/DeepCancer%20Research%20Project/images/Image2.png)  
+![deepcancer-training](images/Image2.png)  
 
-![deepcancer-metrics](/DeepCancer%20Research%20Project/images/Image3.png)  
+![deepcancer-metrics](images/Image3.png)  
 
 
 ## Impact
