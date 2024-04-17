@@ -10,29 +10,29 @@ This project is intended to showcase my experience, understanding, and _general_
 
 This documentation describes the [Transformer model](The%20Transformer%20Model/README.md), a popular class of deep learning models, and provides information on how these models function, how they are used, and resources for further reading: 
 
-* Getting Started
-* How-to Guides
-* Important Concepts
-* References
+- Getting Started
+- How-to Guides
+- Important Concepts
+- References
 
 
 ## Author Notes
 
-* I have only used Markdown for this documentation (and no other tools)
+- I have only used **Markdown** for this documentation (and no other tools)
 
-* The documentation would look different had I used Confluence, Jupyter Notebooks, or Sphinx, especially the following aspects:
+- I have used **British English** standards and grammar for this project.
 
-  * Confluence macros.
+- The documentation would look different had I used Confluence, Jupyter Notebooks, or Sphinx, especially the following aspects:
 
-  * Documentation look and feel.
+  - Confluence macros.
 
-  * Colour schemes.
+  - Documentation look and feel.
 
-  * and so on
+  - Colour schemes.
 
-* I have used **British English** standards and grammar for this project.
+  - and so on
 
-* Generally speaking, I can create product documentation conforming to different English standards, as per business need.
+- Generally speaking, I can create product documentation conforming to different English standards, as per business need.
 
 
 ## Author
