@@ -8,7 +8,8 @@ This project is intended to showcase my experience, understanding, and _general_
 
 ## Highlights
 
-This documentation describes the [Transformer model](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/README.md), a popular class of deep learning models, and provides information on how these models function, how they are used, and resources for further reading: 
+This documentation describes the [Transformer model](The%20Transformer%20Model/README.md), a popular class of deep learning models, and provides information on how these models function, how they are used, and resources for further reading: 
+
 * Getting Started
 * How-to Guides
 * Important Concepts
@@ -18,13 +19,21 @@ This documentation describes the [Transformer model](/Transformer%3A%20Product%2
 ## Author Notes
 
 * I have only used Markdown for this documentation (and no other tools)
+
 * The documentation would look different if I'd have used Confluence, Jupyter Notebooks, or Sphinx. 
+
 * Some examples:
+
   * Confluence macros.
+
   * Documentation look and feel.
+
   * Colour schemes.
-  * etc.
-* I have used **British English** standards and grammar for this project. 
+
+  * and so on
+
+* I have used **British English** standards and grammar for this project.
+
 * Generally speaking, I can create product documentation conforming to different English standards, as per business need.
 
 
@@ -32,5 +41,3 @@ This documentation describes the [Transformer model](/Transformer%3A%20Product%2
 
 **Vivek Viswanath**  
 [My Personal Website](https://vivekviswa.net/)
-
-
