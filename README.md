@@ -1,11 +1,12 @@
 # Welcome To My Portfolio!
 
-This repository aims to share my writing portfolio that presents different styles of writing:
-* Product Documentation
-* How-to Guides
+This repository represents my writing portfolio that showcases some writing styles I have experience in (not an exhaustive list):
+
+* Product documentation
+* How-to guides
 * Knowledge Base
 * Tutorials
-* Marketing Writing
+* Marketing writing
 * Movie reviews (because why not!)
 
 
