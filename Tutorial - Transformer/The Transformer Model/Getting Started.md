@@ -3,7 +3,7 @@
 
 ## Overview
 
-This article provides a quick walkthrough of the steps you can complete, as you read along, to use the Transformer model and see it in action! To gain a deeper understanding of how Transformers work, see [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md).
+This article provides a quick walkthrough of the steps you can complete, as you read along, to use the Transformer model and see it in action! To gain a deeper understanding of how Transformers work, see [How Do Transformers Work?](Important%20Concepts.md).
 
 As an illustration, you will work on a text sentiment-classification problem as a Natural Language Processing (NLP) task. The dataset you will use for this task is the [IMDB Movie Review Sentiment Dataset](https://ai.stanford.edu/~amaas/data/sentiment/).
 
@@ -244,6 +244,6 @@ If everything goes right (fingers crossed!), then you should see an output with 
 
 Congratulations on running your first Transformer model!  
 
-If you would like to learn more about Transformers, check out the [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md) section.
+If you would like to learn more about Transformers, check out the [How Do Transformers Work?](Important%20Concepts.md) section.
 
-See [How To Use Transformers for Machine Translation](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md) if you want to learn how you can use transformers for machine translation!
+See [How To Use Transformers for Machine Translation](How%20to%20use%20Transformers%20for%20Translation.md) if you want to learn how you can use transformers for machine translation!
