@@ -68,10 +68,10 @@ This documentation assumes:
 
 | Topics | Links |
 | :------:| :-----: |
-| Getting Started with Transformers| [Getting Started with Transformers](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Getting%20Started.md)
-| How To Implement Transformers for Machine Translation | [Transformers for Machine Translation](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md)
-| Theory of Transformers| [Transformer Fundamentals](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md)
-| References & Further Reading | [References & Further Reading](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/References%20and%20Further%20Reading.md)
+| Getting Started with Transformers| [Getting Started with Transformers](Getting%20Started.md)
+| How To Implement Transformers for Machine Translation | [Transformers for Machine Translation](How%20to%20use%20Transformers%20for%20Translation.md)
+| Theory of Transformers| [Transformer Fundamentals](Important%20Concepts.md)
+| References & Further Reading | [References & Further Reading](References%20and%20Further%20Reading.md)
 
 
   
