@@ -3,19 +3,17 @@
 
 ## Overview
 
-This article provides a quick walkthrough of the steps you can complete, as you read along, to use the Transformer model and see it in action! To gain a deeper understanding of how Transformers work, see the [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md) section.
+This article provides a quick walkthrough of the steps you can complete, as you read along, to use the Transformer model and see it in action! To gain a deeper understanding of how Transformers work, see [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md).
 
 As an illustration, you will work on a text sentiment-classification problem as a Natural Language Processing (NLP) task. The dataset you will use for this task is the [IMDB Movie Review Sentiment Dataset](https://ai.stanford.edu/~amaas/data/sentiment/).
-
 
 
 ## Prerequisites
 
 * You have prior experience with Python programming.
-* You already have deep learning libraries such as [`Keras`](https://keras.io/getting_started/) and [`TensorFlow`](https://www.tensorflow.org/install) installed.
-* You already have an understanding of NLP topics such as [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/).
-* You already understand the basics of traditional [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) with encoder-decoder components.
-
+* You already have deep learning libraries [Keras](https://keras.io/getting_started/) and [TensorFlow](https://www.tensorflow.org/install) installed.
+* You understand basic NLP topics such as [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/).
+* You understand the basics of traditional [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) with encoder-decoder components.
 
 
 ## Procedure
@@ -248,4 +246,4 @@ Congratulations on running your first Transformer model!
 
 If you would like to learn more about Transformers, check out the [How Do Transformers Work?](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md) section.
 
-If you already understand the basics and just want to see another scenario with Transformers in action, see [How To Use Transformers for Machine Translation](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md)!
+See [How To Use Transformers for Machine Translation](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md) if you want to learn how you can use transformers for machine translation!

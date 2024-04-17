@@ -1,10 +1,9 @@
-# The Transformer Model
-
+# Retrieval Augmented Generation
 
 
 ## Overview
 
-The [Transformer Model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) is based on the idea of applying "attention" to only a handful of details to complete a particular task while discarding the rest.   
+The [Retrieval Augmented Generation (RAG)](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) model aims to enhance the quality of the output of a language generation model by incorporating external knowledge in its pipeline. This allows the model to improve the retrieval step that retrieves relevant context that ultimately conditions the LLM and augment its knowledge base. Essentially, the RAG model ensures finding relevant information from large corpora and use it to inform the generation process.
 
 Conceptually, it is based on the idea of mimicking the human cognitive process of selectively focusing only on specific parts of any information resource, compared to the rest, to solve a problem. From machine translation to natural language processing tasks and beyond, Transformer models have come to redefine the state-of-the-art across several machine learning (ML) research domains and continue to enable spectacular breakthroughs within the broader artificial intelligence community. Therefore, this project aims to explain:
 
@@ -12,7 +11,6 @@ Conceptually, it is based on the idea of mimicking the human cognitive process o
 * how the Transformer model works
 * all important details you would need to gain a useful intuition
 * some technical implmementations to solve specific real-world tasks
-
 
 
 ## Scope
@@ -25,7 +23,6 @@ This project aims to answer the following questions about the Transformer model:
 * How can I use the Transformer model to solve a particular task?
 
 
-
 ## Outcomes 
 
 At the end of this documentation, you will have a clear understanding of:
@@ -33,7 +30,6 @@ At the end of this documentation, you will have a clear understanding of:
 * what the Transformer model is and why it is significant
 * why this model performs better than traditional seq2seq deep learning models
 * how you can build this model for your task
-
 
 
 ## Target Audience
@@ -44,7 +40,6 @@ This documentation is meant for readers interested in/working on:
 * understanding how attention models can be implemented
 * novel solutions to natural language processing tasks
 * latest deep learning research ideas
-
 
 
 ## Prerequisites
@@ -63,19 +58,11 @@ This documentation assumes:
 * You have prior experience with deep learning libraries such as Keras and TensorFlow.
 
 
-
 ## Table of Contents
 
-| Topics | Links |
-| :------:| :-----: |
-| Getting Started with Transformers| [Getting Started with Transformers](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Getting%20Started.md)
-| How To Implement Transformers for Machine Translation | [Transformers for Machine Translation](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md)
-| Theory of Transformers| [Transformer Fundamentals](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/Important%20Concepts.md)
-| References & Further Reading | [References & Further Reading](/Transformer%3A%20Product%20Documentation/The%20Transformer%20Model/References%20and%20Further%20Reading.md)
-
+TBD
 
   
-
 ## Author
 
 For any queries, please contact:  
