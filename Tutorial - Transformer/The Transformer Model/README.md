@@ -81,7 +81,6 @@ This documentation assumes:
 For any queries, please contact:  
 
 **Vivek Viswanath**  
-Website: [My Personal Website](https://vivekviswa.net/)
 
 
 

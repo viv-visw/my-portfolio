@@ -33,6 +33,5 @@ This documentation describes the [Retrieval Augmented Generation](/Retrieval-Aug
 ## Author
 
 **Vivek Viswanath**  
-[My Personal Website](https://vivekviswa.net)
 
 

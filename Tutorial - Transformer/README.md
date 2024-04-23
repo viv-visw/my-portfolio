@@ -38,4 +38,3 @@ This documentation describes the [Transformer model](The%20Transformer%20Model/R
 ## Author
 
 **Vivek Viswanath**  
-[My Personal Website](https://vivekviswa.net/)

@@ -46,6 +46,6 @@ It contains the following sections:
 ## Author
 
 **Vivek Viswanath**  
-[My Personal Website](https://vivekviswa.net/)
+
 
 
