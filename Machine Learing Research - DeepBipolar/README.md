@@ -1,9 +1,9 @@
 # **DeepBipolar**: Identifying genomic mutations for bipolar disorder via deep learning
 
+
 ## Background
 
 DeepBipolar was the solution to the 2017 [“Bipolar Exomes” challenge](http://www.genomeinterpretation.org/cagi4-bipolar.html) conducted by the [Critical Assessment of Genome Interpretation 4](http://www.genomeinterpretation.org/cagi4-challenge.html). Proposed by the NSF Centre for Big Learning at the University of Florida, DeepBipolar was the most successful model submitted to the challenge, as per the assessments of the official assessors.
-
 
 
 ## Problem Statement
@@ -11,38 +11,42 @@ DeepBipolar was the solution to the 2017 [“Bipolar Exomes” challenge](http:/
 Based on the dataset provided by the organisers, identify and distinguish individuals who are affected by bipolar disorder from the unaffected.
 
 
-
 ## My Contributions
 
 Over the course of the efforts, I worked on:
 
 * Researching, designing, implementing, and testing the two following traditional machine learning (ML) models to establish the baseline:
+
   * Random Forests
+
   * Decision Trees 
 
-
 * Architecting the entire machine learning pipeline:
-  * data preprocessing 
-  * feature engineering 
-  * model training & testing
-  * model evaluation
 
+  * data preprocessing 
+
+  * feature engineering 
+
+  * model training & testing
+
+  * model evaluation
 
 * Conducting model hyperparameter experiments to understand the best hyperparameters that exhibited the best model performance
 
-
 * Testing & plotting different performance metrics to differentiate DeepBipolar from the traditional ML approach
+
   * Precision-Recall
+
   * AUC-ROC Curves 
 
-
 * Authoring the entire DeepBipolar paper based on in-depth collaboration with my teammates to understand the proposed solution and all the technical details of the model
-
 
 * Iteratively improving the overall writing quality of the research paper by frequently collecting and incorporating feedback from my lab supervisor and teammates, including but not limited to:
 
   * Presenting the main ideas, experiments, and their results in a simple, easy-to-understand, and effective structure.
+
   * Using the language, grammar, style, and tone widely prevelant in academic research publications.
+
   * Capturing all the details in a coherent flow to make it a clear, concise, and cohesive research publication.
 
 ![deepbipolar-arch](images/Image1.jpg) 
