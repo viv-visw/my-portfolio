@@ -10,7 +10,7 @@ DeepCancer was the outcome of an investigative study focused on understanding th
 
 Using the microarray breast cancer data publicly available in the [NCBI Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) repository, the aim of DeepCancer was to accurately diagnose inflammatory breast cancer in a given patient. 
 
-  
+
 ## My Contributions
 
 Over the course of the efforts, I worked on:
@@ -53,6 +53,6 @@ Over the course of the efforts, I worked on:
 
 - How to cite this article:
 
-**Chicago**
+### Chicago
 
 > Bhat, Rajendra Rana, Vivek Viswanath, and Xiaolin Li. "DeepCancer: detecting cancer via deep generative learning through gene expressions." In 2017 IEEE 15th Intl Conf on Dependable, Autonomic and Secure Computing, 15th Intl Conf on Pervasive Intelligence and Computing, 3rd Intl Conf on Big Data Intelligence and Computing and Cyber Science and Technology Congress (DASC/PiCom/DataCom/CyberSciTech), pp. 901-908. IEEE, 2017.
