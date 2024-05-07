@@ -8,10 +8,10 @@ DeepBipolar was the solution to the 2017 [“Bipolar Exomes” challenge](http:/
 
 ## Problem Statement
 
-Based on the dataset provided by the organisers, the Bipolar Exomes challenge involved identifying and distinguishing individuals who were affected by bipolar disorder from the unaffected. Within the realm of machine learning, this constituted a “supervised classification” learning problem.  
+Based on the dataset provided by the organisers, identify and distinguish individuals who are affected by bipolar disorder from the unaffected.
 
 
-  
+
 ## My Contributions
 
 Over the course of the efforts, I worked on:
@@ -39,7 +39,11 @@ Over the course of the efforts, I worked on:
 * Authoring the entire DeepBipolar paper based on in-depth collaboration with my teammates to understand the proposed solution and all the technical details of the model
 
 
-* Iteratively improving the overall quality of the research paper by frequently collecting and incorporating feedback from my lab supervisor and teammates.
+* Iteratively improving the overall writing quality of the research paper by frequently collecting and incorporating feedback from my lab supervisor and teammates, including but not limited to:
+
+  * Presenting the main ideas, experiments, and their results in a simple, easy-to-understand, and effective structure.
+  * Using the language, grammar, style, and tone widely prevelant in academic research publications.
+  * Capturing all the details in a coherent flow to make it a clear, concise, and cohesive research publication.
 
 ![deepbipolar-arch](images/Image1.jpg) 
 
@@ -58,7 +62,7 @@ Over the course of the efforts, I worked on:
 
 * The DeepBipolar paper, as a research publication, is permanently publicly available (online) within the prestigious National Library of Medicine and Wiley publications.
 
-* The DeepBipolar paper currently enjoys 26 citations (Google Scholar) and 20 citations (Wiley Publications), cited by several medical research teams!
+* As of **May 6, 2024**, the DeepBipolar paper currently enjoys 46 citations (Google Scholar) and 37 citations (Wiley Publications), cited by several medical research teams!
 
 
 ## Project Links
