@@ -8,26 +8,27 @@ This article explains how you use Transformers for the task of machine translati
 In this tutorial, as an illustration of a Natural Language Processing (NLP) task, you will work on a machine translation problem of translating English sentences into Spanish. The dataset you will use for this task are the English-Spanish sentence pairs from the [Tatoeba Project](https://www.manythings.org/anki/).
 
 
-
 ## Prerequisites
 
-* You have prior experience with Python programming.
-* You already have deep learning libraries such as [`Keras`](https://keras.io/getting_started/) and [`TensorFlow`](https://www.tensorflow.org/install) installed.
-* You already have an understanding of NLP topics such as [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/), and [machine translation](https://www.microsoft.com/en-us/translator/business/machine-translation/#nmt).
-* You already understand the basics of traditional [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) with encoder-decoder components.
+* You have prior experience with programming in Python.
 
+* You already have deep learning libraries such as [`Keras`](https://keras.io/getting_started/) and [`TensorFlow`](https://www.tensorflow.org/install) installed.
+
+* You already have an understanding of NLP topics such as [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/), and [machine translation](https://www.microsoft.com/en-us/translator/business/machine-translation/#nmt).
+
+* You already understand the basics of traditional [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) with encoder-decoder components.
 
 
 ## Procedure
 
-> ### Step 1: Download the dataset
+### Step 1: Download the dataset
 
 ```bash
 !wget http:/ /storage.googleapis.com/download.tensorflow.org/data/spa-eng.zip
 !unzip -q spa-eng.zip
 ```
 
-> ### Step 2: Prepare the dataset
+### Step 2: Prepare the dataset
 
 The text file contains one example per line: an English sentence, followed by a tab character, followed by the corresponding Spanish sentence. So, you will have to parse the file, as shown below.
 
@@ -63,7 +64,7 @@ val_pairs = text_pairs[num_train_samples:num_train_samples + num_val_samples]
 test_pairs = text_pairs[num_train_samples + num_val_samples:]
 ```
 
-> ### Step 3: Vectorise the English-Spanish text pairs
+### Step 3: Vectorise the English-Spanish text pairs
 
 Prepare two separate `TextVectorization` layers: one for English and one for Spanish.
 
@@ -125,7 +126,7 @@ val_ds = make_dataset(val_pairs)
 ```
 
 
-> ### Step 4: Use Pretrained Word Embeddings
+### Step 4: Use Pretrained Word Embeddings
 
 As you would know, word embeddings significantly improve the overall quality of thee learning aglorithm. So, in this step, you will start by downloading the GloVe files, then parse them, load the word vectors into a [`Keras Embedding`](https://keras.io/api/layers/core_layers/embedding/) layer, and then finally build a new model that uses it.
 
@@ -166,7 +167,7 @@ for word, i in word_index.items():
 ```
 
 
-> ### Step 5: Use Positional Embeddings as a subclassed layer
+### Step 5: Use Positional Embeddings as a subclassed layer
 
 Unlike embeddings, positional encodings give the model access to word-order information by adding the word's position in the sentence to each word embedding.
 
@@ -204,7 +205,7 @@ class PositionalEmbedding(layers.Layer):
         return config
 ```
 
-> ### Step 6: Design the `TransformerDecoder`
+### Step 6: Design the `TransformerDecoder`
 
 The `TransformerDecoder` is similar to the `TransformerEncoder`, except it features an additional attention block where the keys and values are the source sequence encoded by the `TransformerEncoder`, as shown below. Together, the encoder and the decoder form an end-to-end Transformer.
 
@@ -291,7 +292,7 @@ def call(self, inputs, encoder_outputs, mask=None):
 ```
 
 
-> ### Step 7: Run the Transformer!
+### Step 7: Run the Transformer!
 
 Finally, it's time to perform some translation!
 
@@ -318,7 +319,7 @@ transformer.compile(
 transformer.fit(train_ds, epochs=30, validation_data=val_ds)
 ```
 
-> ### Step 8: Translate New Sentences!
+### Step 8: Translate New Sentences!
 
 Now, try using the model you just trained to translate never-seen-before English sentences from the test set.
 
@@ -352,7 +353,6 @@ for _ in range(20):
 ```
 
 
-
 ## Results
 
 When I ran this model and sampled some results from the Transformer translation model, these are the results I get:
@@ -378,9 +378,8 @@ When I ran this model and sampled some results from the Transformer translation 
 * In the worst cases, a model might hallucinate memorized information that has nothing to do with the data it’s currently processing.
 
 
-
 ## Further Reading
 
 Congratulations on successfully translating English to Spanish sentences using the Transformer model! 
 
-If you are still curious about Transformers and would like to learn more about these models, check out the [How Do Transformers Work?](Important%20Concepts.md) section.
+Check out the [How Do Transformers Work?](Important%20Concepts.md) section if you are still curious about Transformers and would like to learn more about these models.

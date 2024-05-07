@@ -1,7 +1,6 @@
 # The Transformer Model
 
 
-
 ## Overview
 
 The [Transformer Model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) is based on the idea of applying "attention" to only a handful of details to complete a particular task while discarding the rest.   
@@ -14,14 +13,16 @@ Conceptually, it is based on the idea of mimicking the human cognitive process o
 * some technical implmementations to solve specific real-world tasks
 
 
-
 ## Scope
 
 This project aims to answer the following questions about the Transformer model:
 
 * What is the Transformer model?
+
 * Why is it more successful than traditional sequence-to-sequence (seq2seq) deep learning models?
+
 * How does the theoretical deisgn of the Transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
+
 * How can I use the Transformer model to solve a particular task?
 
 
@@ -38,13 +39,12 @@ At the end of this documentation, you will have a clear understanding of:
 
 ## Target Audience
 
-This documentation is meant for readers interested in/working on:
-* understanding how attention models work
-* understanding the underlying mathematics underpinning attention models
-* understanding how attention models can be implemented
-* novel solutions to natural language processing tasks
-* latest deep learning research ideas
-
+This documentation is meant for you, if you are trying to:
+* understand how attention models work.
+* understand the underlying mathematics underpinning attention models.
+* understand how attention models can be implemented.
+* design novel solutions to natural language processing tasks.
+* learn more about the state-of-the-art deep learning research ideas.
 
 
 ## Prerequisites
@@ -52,16 +52,24 @@ This documentation is meant for readers interested in/working on:
 This documentation assumes:
 
 * You already have a background in machine learning and deep learning. 
-* You understand the mathematical basics of deep neural networks, especially:
-  * linear algebra
-  * differential calculus
-* You understand how recurrent neural networks work.
-* You understand the basics of Natural Language Processing like vectorisation, tokenisation, and embeddings.
-* You have prior knowledge about seq2seq models.
-* You understand the basics of the attention mechanism.
-* You have prior experience with computer programming in Python.
-* You have prior experience with deep learning libraries such as Keras and TensorFlow.
 
+* You understand the mathematical basics of deep neural networks, especially:
+
+  * linear algebra
+
+  * differential calculus
+
+* You understand how recurrent neural networks work.
+
+* You understand the basics of Natural Language Processing like vectorisation, tokenisation, and embeddings.
+
+* You have prior knowledge about seq2seq models.
+
+* You understand the basics of the attention mechanism.
+
+* You have prior experience with computer programming in Python.
+
+* You have prior experience with deep learning libraries such as Keras and TensorFlow.
 
 
 ## Table of Contents
@@ -74,14 +82,8 @@ This documentation assumes:
 | References & Further Reading | [References & Further Reading](References%20and%20Further%20Reading.md)
 
 
-  
-
 ## Author
 
 For any queries, please contact:  
 
-**Vivek Viswanath**  
-
-
-
-
+**Vivek Viswanath**

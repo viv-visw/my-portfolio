@@ -3,22 +3,26 @@
 
 ## Overview
 
-This article provides a quick walkthrough of the steps you can complete, as you read along, to use the Transformer model and see it in action! To gain a deeper understanding of how Transformers work, see [How Do Transformers Work?](Important%20Concepts.md).
+This article provides a quick walkthrough of the steps you can complete to use the Transformer model and see it in action! See [How Do Transformers Work?](Important%20Concepts.md) to gain a deeper understanding of how Transformers work.
 
-As an illustration, you will work on a text sentiment-classification problem as a Natural Language Processing (NLP) task. The dataset you will use for this task is the [IMDB Movie Review Sentiment Dataset](https://ai.stanford.edu/~amaas/data/sentiment/).
+As an illustration, you'll work on a text sentiment-classification problem as a Natural Language Processing (NLP) task. The dataset you will use for this task is the [IMDB Movie Review Sentiment Dataset](https://ai.stanford.edu/~amaas/data/sentiment/).
 
 
 ## Prerequisites
 
 * You have prior experience with Python programming.
+
 * You already have deep learning libraries [Keras](https://keras.io/getting_started/) and [TensorFlow](https://www.tensorflow.org/install) installed.
+
 * You understand basic NLP topics such as [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/).
+
 * You understand the basics of traditional [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) with encoder-decoder components.
 
 
 ## Procedure
 
-> ### Step 1: Download the dataset
+
+### Step 1: Download the dataset
 
 ```bash
 !curl -O https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
@@ -45,7 +49,8 @@ There’s also a `train/unsup` subdirectory in there, which you don’t need. So
 !rm -r aclImdb/train/unsup
 ```
 
-> ### Step 2: Prepare the dataset
+
+### Step 2: Prepare the dataset
 
 Prepare a validation set by setting apart 20% of the training text files in a new directory, `aclImdb/val`:
 
@@ -83,7 +88,7 @@ test_ds = keras.utils.text_dataset_from_directory(
 )
 ```
 
-> ### Step 3: Prepare integer sequence datasets
+### Step 3: Prepare integer sequence datasets
 
 In this step, you prepare datasets that return integer sequences.
 
@@ -114,7 +119,7 @@ int_test_ds = test_ds.map(
  > Here, the inputs are truncated after the first 600 words to keep a manageable input size. Also, vectors are 20000-dimensional vectors.
 
 
-> ### Step 4: Use Pretrained Word Embeddings
+### Step 4: Use Pretrained Word Embeddings
 
 As you would know, word embeddings significantly improve the overall quality of thee learning aglorithm. So, in this step, you will start by downloading the GloVe files, then parse them, load the word vectors into a [`Keras Embedding`](https://keras.io/api/layers/core_layers/embedding/) layer, and then finally build a new model that uses it.
 
@@ -155,7 +160,7 @@ for word, i in word_index.items():
 ```
 
 
-> ### Step 5: Use Positional Embeddings as a subclassed layer
+### Step 5: Use Positional Embeddings as a subclassed layer
 
 Unlike embeddings, positional encodings give the model access to word-order information by adding the word's position in the sentence to each word embedding.
 
@@ -194,7 +199,7 @@ class PositionalEmbedding(layers.Layer):
 ```
 
 
-> ### Step 6: Run the Transformer as a text classifier
+### Step 6: Run the Transformer as a text classifier
 
 Finally, it's time to run the Transformer!
 
@@ -244,6 +249,6 @@ If everything goes right (fingers crossed!), then you should see an output with 
 
 Congratulations on running your first Transformer model!  
 
-If you would like to learn more about Transformers, check out the [How Do Transformers Work?](Important%20Concepts.md) section.
+Check out [How Do Transformers Work?](Important%20Concepts.md) if you're interested to learn more about how the Transformer works.
 
 See [How To Use Transformers for Machine Translation](How%20to%20use%20Transformers%20for%20Translation.md) if you want to learn how you can use transformers for machine translation!
