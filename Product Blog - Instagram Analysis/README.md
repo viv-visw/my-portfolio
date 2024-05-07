@@ -40,7 +40,7 @@ Here are the main highlights:
 
 * This was my love for writing, photography, and Instagram manifesting itself. So, I wasn’t personally seeking any real impact.
 
-* On Medium, the article currently enjoys 272 claps/likes! (So, some people definitely found it useful, haha!)
+* As of **May 6, 2024**, on Medium, the article currently enjoys 458 claps/likes! (Fingers crossed!)
 
 
 ## Project Links
