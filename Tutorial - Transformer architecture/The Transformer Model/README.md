@@ -84,6 +84,4 @@ This documentation assumes:
 
 ## Author
 
-For any queries, please contact:  
-
 **Vivek Viswanath**
