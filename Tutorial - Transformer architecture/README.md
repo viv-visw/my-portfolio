@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project is intended to showcase my experience, understanding, and _general_ style of creating product documentation. 
+This project intends to showcase my experience, understanding, and _general_ preference of documenting a complex product.
 
 
 ## Highlights
