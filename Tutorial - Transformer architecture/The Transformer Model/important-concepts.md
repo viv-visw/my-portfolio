@@ -6,9 +6,9 @@
 | Topics | Links |
 | :-----:| :-----:| 
 | Overview| [Overview](#overview) |
-| Revisiting Attention Models| [Revisiting Attention Models](#revisiting-attention-models) | 
-| The Transformer Model | [Transformers](#the-transformer) |
-| How Do Transformers Work | [How Transformers Work](#how-do-transformers-work) |
+| Revisiting attention models| [Revisiting Attention Models](#revisiting-attention-models) | 
+| The Transformer model | [Transformers](#the-transformer) |
+| How do Transformers work? | [How Transformers Work](#how-do-transformers-work) |
 
 
 ## Overview
