@@ -16,8 +16,8 @@
 This page provides detailed information about all the concepts related to Transformers that are important for understanding and using Transformers for different real-world natural language processing (NLP) applications such as text classification or machine translation.
 
 > ✅ **NOTE**
-> 1. If you already understand the basics of Transformers and just want to implement your first Transformer model in code and run it, see [Transformers: Getting Started](Getting%20Started.md) instead.
-> 2. If you already understand the theoretical concepts behind Transformers and are trying to understand how to use them for certain applications, see [How To Use Transformers for Translation](How%20to%20use%20Transformers%20for%20Translation.md) as an example instead.
+> 1. If you already understand the basics of Transformers and just want to implement your first Transformer model in code and run it, see [Transformers: Getting Started](getting-started.md) instead.
+> 2. If you already understand the theoretical concepts behind Transformers and are trying to understand how to use them for certain applications, see [How To Use Transformers for Translation](how-to-use-transformers-for-translation.md) as an example instead.
 
 
 ### Scope
@@ -34,11 +34,6 @@ This page answers the following questions about the Transformer model:
 
 
 ## Revisiting Attention Models
-
-> ✅ **NOTE**
-> - This section assumes you already understand the basics of the attention mechanism. If you don't, see [The Attention Guide](https://machinelearningmastery.com/the-attention-mechanism-from-scratch/).
-> - This section assumes you already satisfy all the [Prerequisites](#prerequisites).
-
 
 This section will briefly revisit the main concepts behind the attention mechanism and serve as a gateway for you to understand the Transformer model.
 
