@@ -6,7 +6,7 @@
 This project showcases my experience, understanding, and _general_ preference of creating an information architecture for a complex product and documenting its features and capabilities for different audiences.
 
 
-## Highlights
+## Key features
 
 This documentation describes the [Transformer model](The%20Transformer%20Model/README.md), a popular deep learning architecture that's been applied to a wide variety of machine learning and software applications. 
 
