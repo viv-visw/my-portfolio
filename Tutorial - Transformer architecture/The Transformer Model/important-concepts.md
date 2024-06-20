@@ -40,7 +40,7 @@ This section will briefly revisit the main concepts behind the attention mechani
 
 ### Sequence-to-Sequence models
 
-![seq2seq](images/seq2seq.png)
+![sequence-to-sequence model](images/seq2seq.png)
 > Figure 1: The encoder-decoder model. The visualization of both encoder and decoder is unrolled in time.
 
 The [seq2seq](https://arxiv.org/abs/1409.3215) model has origins in language modeling. Formally, the model transforms an input source sequence to a new target sequence, possibly of different lengths. Such transformation tasks are commonplace in machine translation scenarios involving different languages, either in text, audio, or question-answer dialog, and more.
@@ -51,7 +51,7 @@ As shown in Figure 1, a seq2seq model comprises an encoder-decoder architecture:
 
 - The decoder is initialized with the context vector to emit the transformed output. 
 
-- Both the encoder and decoder are recurrent neural networks (LSTM or GRU units).
+- Both the encoder and decoder are recurrent neural networks (LSTM or GRU).
 
 However, such a fixed-length context vector design is inherently unsuitable for remembering long sentences, wherein the model forgets the initial input parts once it completes processing the input sentence. The [Attention mechanism](https://arxiv.org/pdf/1409.0473.pdf) resolves this problem.
 
@@ -66,20 +66,20 @@ As shown in Figure 2, the context vector contains:
 - decoder hidden states
 - alignment between source and target.
 
-![attention](images/attention.png)
+![attention mechanism](images/attention.png)
 > Figure 2: The encoder-decoder model with additive attention mechanism.
 
 Here, the encoder is a bidirectional recurrent neural network (RNN) with forward and hidden states that are concatenated to yield the encoder state. Here, both the preceding and following words in the annotation of one word are included. The decoder network has hidden state `s` for the output word at position t, t=1,...,_m_, where the context vector `c` is a sum of hidden states of the input sequence, weighted by alignment scores:
 
-![context](images/context.png)
+![attention context vectors](images/context.png)
 
 The alignment model assigns a score to the pair of input at position `i` and output at position `t`, based on how well they match. The set of $\alpha$<sub>(_t_,_i_)</sub> are weights defining how much of each source hidden state should be considered for each output. In the original paper, the alignment score is obtained using a feed-forward neural network with a single hidden layer, trained jointly with other parts of the model. Using tanh as the non-linear activation function, the score function, therefore, becomes:
 
-![scoring](images/scoring.png)
+![attention scoring function](images/scoring.png)
 
 where both `v` and `W` are weight matrices to be learned in the alignment model.
 
-![align-matrix](images/alignment%20matrix.png)
+![alignment weight matrices](images/alignment%20matrix.png)
 
 > Figure 3 Alignment matrix of "L'accord sur l'Espace économique européen a été signé en août 1992" (French) and its English translation "The agreement on the European Economic Area was signed in August 1992".
 
@@ -102,10 +102,10 @@ There are 3 critical steps in self-attention:
 
 3) Compute attention value from normalized weights and corresponding inputs, as shown in Figure 5.
 
-![self-att2](images/self-att2.png)
+![self-attention weighted sum](images/self-att2.png)
 > Figure 4: **self-attention** derived as a weighted sum
 
-![self-att1](images/self-att1.png)
+![compute self-attention outputs](images/self-att1.png)
 > Figure 5: The Self-Attention Mechanism
 
 
@@ -125,17 +125,17 @@ Here, the encoded representation of the input is viewed as a set of key-value pa
 
 The output is a weighted sum of the values, where the weight assigned to each value is determined by the dot-product of the query with all the keys, as shown in Figure 6:
 
-![kvq-scores](images/kvq-scores.png)
+![kvq-scoring-mechanism](images/kvq-scores.png)
 > Figure 6: The Softmax Weighted Scoring mechanism
 
 In the original [Transformer paper](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf), the Transformer adopts the scaled dot-product attention instead: 
 
-![scaled-self-att](images/scaled-self-att.png)
+![scaled self-attention](images/scaled-self-att.png)
 
 
 ### Multi-head attention
 
-![multi-head-att](images/multi-head-att.png)
+![multi-head attention](images/multi-head-att.png)
 
 The core idea behind multi-head attention simply extends the self-attention mechanism explained in the [Self-Attention Without RNNs](#self-attention-without-rnns) section above:
 
@@ -153,7 +153,7 @@ The core idea behind multi-head attention simply extends the self-attention mech
 
 ### Encoder
 
-![trans-encoder](images/trans-encoder.png)
+![transformer encoder](images/trans-encoder.png)
 
 The encoder generates an attention-based representation to locate a specific word from a potentially large context.
 
@@ -168,7 +168,7 @@ The encoder generates an attention-based representation to locate a specific wor
 
 ### Decoder
 
-![trans-encoder](images/trans-decoder.png)
+![transformer decoder](images/trans-decoder.png)
 
 The decoder is able to retrieval from the encoded representation.
 
@@ -194,7 +194,7 @@ The decoder is able to retrieval from the encoded representation.
 
 ### Full architecture
 
-![trans-arch](images/trans-arch.png)
+![transformer architecture](images/trans-arch.png)
 > Figure 7 The Transformer architecture
 
 Here is the complete view of the Transformer's architecture:
