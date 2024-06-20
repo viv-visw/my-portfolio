@@ -33,12 +33,12 @@ This page answers the following questions about the Transformer model:
 - How does the theoretical deisgn of the Transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
 
 
-## Revisiting Attention Models
+## Revisiting attention models
 
 This section will briefly revisit the main concepts behind the attention mechanism and serve as a gateway for you to understand the Transformer model.
 
 
-### Sequence-to-Sequence Models
+### Sequence-to-Sequence models
 
 ![seq2seq](images/seq2seq.png)
 > Figure 1: The encoder-decoder model. The visualization of both encoder and decoder is unrolled in time.
@@ -56,7 +56,7 @@ As shown in Figure 1, a seq2seq model comprises an encoder-decoder architecture:
 However, such a fixed-length context vector design is inherently unsuitable for remembering long sentences, wherein the model forgets the initial input parts once it completes processing the input sentence. The [Attention mechanism](https://arxiv.org/pdf/1409.0473.pdf) resolves this problem.
 
 
-### Attention for Translation
+### Attention for translation
 
 In [neural machine translation (NMT)](https://arxiv.org/pdf/1409.0473.pdf) tasks, unlike the seq2seq model, at each time step, the attention model looks into the source sentence and tries to determine the relevance of the input word to different words in the target sentence by assigning attention weights, reducing the "forgetting" problem. The alignment between the source and target is learned and controlled by this context vector.
 
@@ -90,7 +90,7 @@ The [Transformer model](http://papers.nips.cc/paper/7181-attention-is-all-you-ne
 
 In the following sections, we will look at the critical building blocks that constitute the Transformer architecture.
 
-### Self-Attention
+### Self-attention
 
 Self-attention establishes associations between different positions of a single sequence to compute a representation of the same sequence.
 
@@ -109,7 +109,7 @@ There are 3 critical steps in self-attention:
 > Figure 5: The Self-Attention Mechanism
 
 
-### Self-Attention without RNNs
+### Self-attention without RNNs
 
 A key aspect of self-attention above is that it didn't involve any learnable parameters. Therefore, as per the original paper, there are 3 trainable weight matrices that are multiplied with the input sequence embeddings:
 
@@ -133,7 +133,7 @@ In the original [Transformer paper](http://papers.nips.cc/paper/7181-attention-i
 ![scaled-self-att](images/scaled-self-att.png)
 
 
-### Multi-Head Attention
+### Multi-head attention
 
 ![multi-head-att](images/multi-head-att.png)
 
@@ -148,7 +148,7 @@ The core idea behind multi-head attention simply extends the self-attention mech
 - Multi-head attention allows attending to different parts in the sequence differently.
 
 
-## How Do Transformers Work?
+## How do Transformers work?
 
 
 ### Encoder
@@ -192,7 +192,7 @@ The decoder is able to retrieval from the encoded representation.
 >This can be addressed by masking the upper half of the pairwise attention matrix to prevent the model from paying any attention to information from the future—only information from tokens 0...N in the target sequence should be used when generating target token N+1. This is done in the Transformer decoder to retrieve an attention mask that can be passed to the multi-head attention layers.
 
 
-### Full Architecture
+### Full architecture
 
 ![trans-arch](images/trans-arch.png)
 > Figure 7 The Transformer architecture
@@ -206,7 +206,7 @@ Here is the complete view of the Transformer's architecture:
 - A softmax and linear layer are added to the final decoder output.
 
 
-### Why Transformers Succeed
+### Why Transformers succeed
 
 Transformers succeed mainly because of two key reasons:
 

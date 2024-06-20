@@ -1,4 +1,4 @@
-# The Transformer Model
+# The Transformer
 
 
 The [Transformer model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) is a popular deep learning architecture that was introduced in 2017 by researchers at Google Brain and the University of Toronto, Canada.

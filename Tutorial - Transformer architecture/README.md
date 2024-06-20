@@ -18,7 +18,7 @@ The following sections provide more information on how these models function, ho
 - [Important Concepts](The%20Transformer%20Model/important-concepts.md)
 
 
-## Author Notes
+## Author notes
 
 - I have only used **Markdown** for this documentation (and no other tools).
 
@@ -42,7 +42,7 @@ The following sections provide more information on how these models function, ho
 This page lists all the different resources I used to understand the Transformer architecture and create this documentation.
 
 
-### Attention Models
+#### Attention models
 
 - Sequence-to-Sequence Models: [Sutskever et al. 2014](https://arxiv.org/abs/1409.3215)
 
@@ -53,7 +53,7 @@ This page lists all the different resources I used to understand the Transformer
 - Blog: [The Attention Mechanism From Scratch](https://machinelearningmastery.com/the-attention-mechanism-from-scratch/).
 
 
-### Transformer
+#### Transformer
 
 - Transformer Paper: ["Attention Is All You Need", Vaswani et al. 2017](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
 
@@ -68,14 +68,14 @@ This page lists all the different resources I used to understand the Transformer
 - Blog: [Attention? Attention!](https://lilianweng.github.io/posts/2018-06-24-attention/#whats-wrong-with-seq2seq-model)
 
 
-### Natural Language Processing
+#### Natural language processing
 
 - Stanford Course: [CS224n: Natural Language Processing with Deep Learning](https://web.stanford.edu/class/cs224n/)
 
 - Information Retrieval @ Stanford: [CS 276 / LING 286: Information Retrieval and Web Search](https://web.stanford.edu/class/cs276/)
 
 
-### Machine Learning basics
+#### Machine learning basics
 
 - Stanford Course: [CS229: Machine Learning](https://cs229.stanford.edu/)
 

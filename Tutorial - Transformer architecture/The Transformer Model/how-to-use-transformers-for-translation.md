@@ -7,6 +7,8 @@ In this tutorial, you'll work on a machine translation problem of translating En
 
 ### Step 1: Download the dataset
 
+On a command-line Terminal window, enter and run the following code:
+
 ```bash
 !wget http:/ /storage.googleapis.com/download.tensorflow.org/data/spa-eng.zip
 !unzip -q spa-eng.zip
