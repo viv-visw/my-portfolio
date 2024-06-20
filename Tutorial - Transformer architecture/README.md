@@ -16,7 +16,6 @@ The following sections provide more information on how these models function, ho
 - [Getting Started](The%20Transformer%20Model/getting-started.md)
 - [How-To Guides](The%20Transformer%20Model/how-to-use-transformers-for-translation.md)
 - [Important Concepts](The%20Transformer%20Model/important-concepts.md)
-- [References and Further Reading](The%20Transformer%20Model/references-and-further-reading.md)
 
 
 ## Author Notes
