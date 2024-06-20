@@ -1,16 +1,56 @@
 # The Transformer Model
 
 
+The [Transformer model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) is a popular deep learning architecture that was introduced in 2017 by researchers at Google Brain and the University of Toronto, Canada.
+
+Based on assigning weighted importance to different parts of a sentence to improve its long-range temporal context, the Transformer model has been applied to a wide variety of tasks, from natural language to computer vision, finance, and even cybersecurity.
+
+
 ## Overview
 
-The [Transformer Model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) is based on the idea of applying "attention" to only a handful of details to complete a particular task while discarding the rest.   
+Conceptually, the original Transformers architecture is based on the idea of mimicking the way humans selectively focus only on specific parts of an input sentence. This specific focus enhances its long-range context and memory both during the encoder input and decoder output stages, unlike recurrent and LSTM recurrent networks that suffer from a relatively shorter context memory, resulting in an inferior semantic quality of model output. Moreover, this weighted-attention design has become the foundation of a more sophisticated class of models called large language models that have redefined the state-of-the-art across several natural language processing tasks, including text prediction, text summarization, question-answering, chatbot applications, and much more.
 
-Conceptually, it is based on the idea of mimicking the human cognitive process of selectively focusing only on specific parts of any information resource, compared to the rest, to solve a problem. From machine translation to natural language processing tasks and beyond, Transformer models have come to redefine the state-of-the-art across several machine learning (ML) research domains and continue to enable spectacular breakthroughs within the broader artificial intelligence community. Therefore, this project aims to explain:
+This project helps you:
 
-* what the Transformer model is
-* how the Transformer model works
-* all important details you would need to gain a useful intuition
-* some technical implmementations to solve specific real-world tasks
+* Understand the bascis of the Transformer model.
+
+* Learn how the Transformer model works.
+
+* Gain an intuition about all the important details you'd need.
+
+* Shows you can use it for a real-world language translation task.
+
+
+## Audience
+
+This documentation is meant for you, if you're trying to:
+
+* understand how Transformer models work.
+
+* understand the underlying self-attention mechanism.
+
+* understand how you can implement Transformer models.
+
+* perform a language translation task using the Transformer model.
+
+* learn more about the state-of-the-art in deep learning and natural language processing research.
+
+
+## Prerequisites
+
+This documentation assumes you understand:
+
+* foundational concepts in machine learning and deep learning, especially:
+
+    * linear algebra
+
+    * differential calculus
+
+* how to write software code in Python and use deep learning libraries such as Keras and TensorFlow.
+
+* how recurrent neural networks, [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) that has an encoder-decoder design, and the attention mechanism work.
+
+* the basics of natural language processing like [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/).
 
 
 ## Scope
@@ -19,67 +59,22 @@ This project aims to answer the following questions about the Transformer model:
 
 * What is the Transformer model?
 
-* Why is it more successful than traditional sequence-to-sequence (seq2seq) deep learning models?
+* Why is the Transformer model more successful than traditional sequence-to-sequence (seq2seq) deep learning models?
 
 * How does the theoretical deisgn of the Transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
 
-* How can I use the Transformer model to solve a particular task?
-
-
-
-## Outcomes 
-
-At the end of this documentation, you will have a clear understanding of:
-
-* what the Transformer model is and why it is significant
-* why this model performs better than traditional seq2seq deep learning models
-* how you can build this model for your task
-
-
-
-## Target Audience
-
-This documentation is meant for you, if you are trying to:
-* understand how attention models work.
-* understand the underlying mathematics underpinning attention models.
-* understand how attention models can be implemented.
-* design novel solutions to natural language processing tasks.
-* learn more about the state-of-the-art deep learning research ideas.
-
-
-## Prerequisites
-
-This documentation assumes:
-
-* You already have a background in machine learning and deep learning. 
-
-* You understand the mathematical basics of deep neural networks, especially:
-
-  * linear algebra
-
-  * differential calculus
-
-* You understand how recurrent neural networks work.
-
-* You understand the basics of Natural Language Processing like vectorisation, tokenisation, and embeddings.
-
-* You have prior knowledge about seq2seq models.
-
-* You understand the basics of the attention mechanism.
-
-* You have prior experience with computer programming in Python.
-
-* You have prior experience with deep learning libraries such as Keras and TensorFlow.
+* How can I use the Transformer model for language translation?
 
 
 ## Table of Contents
 
 | Topics | Links |
 | :------:| :-----: |
-| Getting Started with Transformers| [Getting Started with Transformers](Getting%20Started.md)
-| How To Implement Transformers for Machine Translation | [Transformers for Machine Translation](How%20to%20use%20Transformers%20for%20Translation.md)
-| Theory of Transformers| [Transformer Fundamentals](Important%20Concepts.md)
-| References & Further Reading | [References & Further Reading](References%20and%20Further%20Reading.md)
+| Prerequisites | [Prerequisites](prerequisites.md)
+| Getting Started with Transformers| [Getting Started with Transformers](getting-started.md)
+| How To Implement Transformers for Machine Translation | [Transformers for Machine Translation](how-to-use-transformers-for-translation.md)
+| Theory of Transformers| [Transformer Fundamentals](important-concepts.md)
+| References & Further Reading | [References & Further Reading](references-and-further-reading.md)
 
 
 ## Author

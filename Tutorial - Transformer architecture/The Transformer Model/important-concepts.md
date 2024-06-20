@@ -12,9 +12,6 @@
 | How Do Transformers Work | [How Transformers Work](#how-do-transformers-work) |
 
 
-
-
-
 ## Overview
 
 This page provides detailed information about all the concepts related to Transformers that are important for understanding and using Transformers for different real-world natural language processing (NLP)applications such as text classification or machine translation.
@@ -22,7 +19,6 @@ This page provides detailed information about all the concepts related to Transf
 > ✅ **NOTE**  
 > 1. If you already understand the basics of Transformers and just want to implement your first Transformer model in code and run it, see [Transformers: Getting Started](Getting%20Started.md) instead.
 > 2. If you already understand the theoretical concepts behind Transformers and are trying to understand how to use them for certain applications, you might want to check [How To Use Transformers for Translation](How%20to%20use%20Transformers%20for%20Translation.md) instead.
-
 
 
 ### Scope
@@ -35,7 +31,6 @@ This page aims to answer the following questions about the Transformer model in 
 - How does the theoretical deisgn of the Transformer model ensure improved learning, in comparison to traditional deep recurrent neural networks?
 
 
-
 ### Target Audience
 
 This documentation is meant for readers interested in/working on:
@@ -46,22 +41,18 @@ This documentation is meant for readers interested in/working on:
 - latest deep learning research ideas
 
 
-
 ## Prerequisites
 
-This documentation assumes:
+To understand the Transformer architecture in depth, this page assumes you:
 
-- you already have a background in machine learning and deep learning 
-- you understand the mathematical basics of deep neural networks, especially:
-  - linear algebra
-  - differential calculus
-- you understand how recurrent neural networks work
-- you understand the basics of Natural Language Processing like 
-- you have prior knowledge about seq2seq models
-- you understand the basics of the attention mechanism
-- you have prior experience with computer programming in Python
-- you have prior experience with deep learning libraries such as Keras and TensorFlow
-
+- have a background in machine learning and deep learning.
+- have prior experience with computer programming in Python and deep learning libraries such as Keras and TensorFlow.
+- understand the mathematical basics of deep neural networks, especially:
+    - linear algebra
+    - differential calculus
+- understand the basics of Natural Language Processing like.
+- understand how recurrent neural networks and seq2seq models work.
+- understand the basics of the attention mechanism.
 
 
 ## Revisiting Attention Models
