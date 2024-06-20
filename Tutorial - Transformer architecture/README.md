@@ -39,7 +39,7 @@ The following sections provide more information on how these models function, ho
 
 ## References
 
-This page lists all the different resources I used to understand the Transformer architecture, its constituent building blocks, and create this documentation.
+This page lists all the different resources I used to understand the Transformer architecture and create this documentation.
 
 
 ### Attention Models
@@ -70,9 +70,9 @@ This page lists all the different resources I used to understand the Transformer
 
 ### Natural Language Processing
 
-Stanford Course: [CS224n: Natural Language Processing with Deep Learning](https://web.stanford.edu/class/cs224n/)
+- Stanford Course: [CS224n: Natural Language Processing with Deep Learning](https://web.stanford.edu/class/cs224n/)
 
-Information Retrieval @ Stanford: [CS 276 / LING 286: Information Retrieval and Web Search](https://web.stanford.edu/class/cs276/)
+- Information Retrieval @ Stanford: [CS 276 / LING 286: Information Retrieval and Web Search](https://web.stanford.edu/class/cs276/)
 
 
 ### Machine Learning
