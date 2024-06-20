@@ -119,7 +119,7 @@ max_length = 600
 max_tokens = 20000
 embedding_dim = 100 
 
-# Here, we truncate input reviews after 600 words since only 5% reviews are longer than 600 words
+# Here, the input reviews are truncated after 600 words since only 5% reviews are longer than 600 words
 text_vectorization = layers.TextVectorization(max_tokens=max_tokens, output_sequence_length=max_length)
 
 # Get the vocabulary indexed by the TextVectorization layer
@@ -140,7 +140,7 @@ for word, i in word_index.items():
 
 ### Step 6: Use positional embeddings
 
-Unlike word embeddings, positional encodings give the model access to word-order information by adding to each word embedding the word's position in the sentence. This leads to input word embeddings having two components: the usual word vector that represents the word independent of any context, and the position vector, that represents the position of the word in the current sentence.
+Unlike word embeddings, positional encodings give the model access to word-order information by adding to each word embedding the word's position in the sentence. This causes the input word embeddings to have two components: the usual word vector that represents the word independent of any context, and the position vector, that represents the position of the word in the current sentence.
 
 You'll add the position embeddings to the corresponding word embeddings, to obtain a position-aware word embeddings, also called positional embeddings.
 

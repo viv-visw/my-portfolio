@@ -12,28 +12,26 @@ Conceptually, the original Transformers architecture is based on the idea of mim
 
 This project helps you:
 
-* Understand the bascis of the Transformer model.
+* Understand the basics of the Transformer model.
 
 * Learn how the Transformer model works.
 
 * Gain an intuition about all the important details you'd need.
 
-* Shows you can use it for a real-world language translation task.
+* Use the model for a real-world language translation task.
 
 
 ## Audience
 
-This documentation is meant for you, if you're trying to:
+This documentation is meant for you, if you're trying to understand:
 
-* understand how Transformer models work.
+* how Transformer models work.
 
-* understand the underlying self-attention mechanism.
+* the underlying self-attention mechanism.
 
-* understand how you can implement Transformer models.
+* how you can implement Transformer models.
 
-* perform a language translation task using the Transformer model.
-
-* learn more about the state-of-the-art in deep learning and natural language processing research.
+* how you can run a language translation task using the Transformer model.
 
 
 ## Prerequisites
@@ -74,7 +72,6 @@ This project aims to answer the following questions about the Transformer model:
 | Getting Started with Transformers| [Getting Started with Transformers](getting-started.md)
 | How To Implement Transformers for Machine Translation | [Transformers for Machine Translation](how-to-use-transformers-for-translation.md)
 | Theory of Transformers| [Transformer Fundamentals](important-concepts.md)
-| References & Further Reading | [References & Further Reading](references-and-further-reading.md)
 
 
 ## Author
