@@ -183,7 +183,47 @@ class PositionalEmbedding(layers.Layer):
 ```
 
 
-### Step 7: Run the Transformer
+### Step 7: Design the Transformer encoder
+
+```python
+from tensorflow.keras import layers
+
+class TransformerEncoder(layers.Layer):
+    def __init__(self, embed_dim, dense_dim, num_heads, **kwargs):
+        super().__init__(**kwargs)
+        
+        # size of the input token vectors
+        self.embed_dim = embed_dim
+        # size of the inner dense layer
+        self.dense_dim = dense_dim
+        # number of attention heads
+        self.num_heads = num_heads
+        
+        self.attention = layers.MultiHeadAttention(num_heads=num_heads, key_dim=embed_dim)
+        self.dense_proj = keras.Sequential([layers.Dense(dense_dim, activation="relu"), layers.Dense(emed_dim), ])
+        self.layernorm_1 = layers.LayerNormalization()
+        self.layernorm_2 = layers.LayerNormalization()
+    
+    def call(self, inputs, mask=None):
+        if mask is not None:
+            mask = mask[:, tf.newaxis:1]
+        attention_output = self.attention(inputs, inputs, attention_mask=mask)
+        proj_input = self.layernorm_1(inputs+attention_output)
+        proj_output = self.dense_proj(proj_input)
+        return self.layernorm_2(proj_input+proj_output)
+    
+    def get_config(self):
+        config = super().get_config()
+        config.update({
+            "embed_dim": self.embed_dim
+            "dense_dim": self.dense_dim
+            "num_heads": self.num_heads
+        })
+        return config
+```
+
+
+### Step 8: Run the Transformer
 
 Finally, run the Transformer to check how well it correctly classified the movie reviews based on their sentiment:
 

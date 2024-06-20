@@ -1,4 +1,4 @@
-# Product Documentation  
+# Product Documentation
 
 
 ## Overview
@@ -75,9 +75,9 @@ This page lists all the different resources I used to understand the Transformer
 - Information Retrieval @ Stanford: [CS 276 / LING 286: Information Retrieval and Web Search](https://web.stanford.edu/class/cs276/)
 
 
-### Machine Learning
+### Machine Learning basics
 
-Stanford Course: [CS229: Machine Learning](https://cs229.stanford.edu/)
+- Stanford Course: [CS229: Machine Learning](https://cs229.stanford.edu/)
 
 
 ## Author

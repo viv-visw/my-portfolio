@@ -1,25 +1,9 @@
 # How To Use Transformers for Machine Translation
 
-
-## Overview
-
-This article explains how you use Transformers for the task of machine translation and see them in action! To gain a deeper understanding of how Transformers work, see the [How Do Transformers Work?](Important%20Concepts.md) section.  
-
-In this tutorial, as an illustration of a Natural Language Processing (NLP) task, you will work on a machine translation problem of translating English sentences into Spanish. The dataset you will use for this task are the English-Spanish sentence pairs from the [Tatoeba Project](https://www.manythings.org/anki/).
+In this tutorial, you'll work on a machine translation problem of translating English sentences into Spanish. The dataset you'll use for this task is the English-Spanish sentence pairs from the [Tatoeba Project](https://www.manythings.org/anki/).
 
 
-## Prerequisites
-
-* You have prior experience with programming in Python.
-
-* You already have deep learning libraries such as [`Keras`](https://keras.io/getting_started/) and [`TensorFlow`](https://www.tensorflow.org/install) installed.
-
-* You already have an understanding of NLP topics such as [vectorisation, tokenisation, and embeddings](https://web.stanford.edu/class/cs224n/), and [machine translation](https://www.microsoft.com/en-us/translator/business/machine-translation/#nmt).
-
-* You already understand the basics of traditional [sequence-to-sequence models](https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html) with encoder-decoder components.
-
-
-## Procedure
+## Steps to perfom machine translation
 
 ### Step 1: Download the dataset
 
@@ -30,16 +14,16 @@ In this tutorial, as an illustration of a Natural Language Processing (NLP) task
 
 ### Step 2: Prepare the dataset
 
-The text file contains one example per line: an English sentence, followed by a tab character, followed by the corresponding Spanish sentence. So, you will have to parse the file, as shown below.
+The text file contains one example per line: an English sentence, followed by a tab character, followed by the corresponding Spanish sentence. So, you'll have to parse the file:
 
 ```python
 text_file = "spa-eng/spa.txt" 
 with open(text_file) as f:
     lines = f.read().split("\n")[:-1]
 text_pairs = [] 
-for line in lines:                              
-    english, spanish = line.split("\t")         
-    spanish = "[start] " + spanish + " [end]"   
+for line in lines:
+    english, spanish = line.split("\t")
+    spanish = "[start] " + spanish + " [end]"
     text_pairs.append((english, spanish))
 ```
 
@@ -52,7 +36,7 @@ After this step, the sentence pairs look as follows:
  "[start] El fútbol es más popular que el tenis. [end]")
  ```
 
-Then, shuffle them and split them into the usual training, validation, and test sets, as follows:
+Then, shuffle and split them into the usual training, validation, and test sets:
 
 ```python
 import random
@@ -76,16 +60,16 @@ from tensorflow.keras import layers
 
 batch_size = 64 
   
-strip_chars = string.punctuation + "¿"                  
-strip_chars = strip_chars.replace("[", "")              
-strip_chars = strip_chars.replace("]", "")              
+strip_chars = string.punctuation + "¿"
+strip_chars = strip_chars.replace("[", "")
+strip_chars = strip_chars.replace("]", "")
  
-def custom_standardization(input_string):               
-    lowercase = tf.strings.lower(input_string)          
-    return tf.strings.regex_replace(                    
-        lowercase, f"[{re.escape(strip_chars)}]", "")   
-vocab_size = 15000                                      
-sequence_length = 20                                    
+def custom_standardization(input_string):
+    lowercase = tf.strings.lower(input_string)
+    return tf.strings.regex_replace(
+        lowercase, f"[{re.escape(strip_chars)}]", "")
+vocab_size = 15000
+sequence_length = 20
 
 
 def format_dataset(eng, spa):
@@ -93,8 +77,8 @@ def format_dataset(eng, spa):
     spa = target_vectorization(spa)
     return ({
         "english": eng,
-        "spanish": spa[:, :-1],                                
-    }, spa[:, 1:])                                             
+        "spanish": spa[:, :-1],
+    }, spa[:, 1:])
  
 
 def make_dataset(pairs):
@@ -104,83 +88,100 @@ def make_dataset(pairs):
     dataset = tf.data.Dataset.from_tensor_slices((eng_texts, spa_texts))
     dataset = dataset.batch(batch_size)
     dataset = dataset.map(format_dataset, num_parallel_calls=4)
-    return dataset.shuffle(2048).prefetch(16).cache()          
+    return dataset.shuffle(2048).prefetch(16).cache()
  
-source_vectorization = layers.TextVectorization(        
+source_vectorization = layers.TextVectorization(
     max_tokens=vocab_size,
     output_mode="int",
     output_sequence_length=sequence_length,
 )
-target_vectorization = layers.TextVectorization(        
+target_vectorization = layers.TextVectorization(
     max_tokens=vocab_size,
     output_mode="int",
-    output_sequence_length=sequence_length + 1,         
+    output_sequence_length=sequence_length + 1,
     standardize=custom_standardization,
 )
 train_english_texts = [pair[0] for pair in train_pairs]
 train_spanish_texts = [pair[1] for pair in train_pairs]
-source_vectorization.adapt(train_english_texts)         
+source_vectorization.adapt(train_english_texts)
 target_vectorization.adapt(train_spanish_texts)
 train_ds = make_dataset(train_pairs)
 val_ds = make_dataset(val_pairs)
 ```
 
 
-### Step 4: Use Pretrained Word Embeddings
+### Step 4: Download pretrained GloVe embeddings
 
-As you would know, word embeddings significantly improve the overall quality of thee learning aglorithm. So, in this step, you will start by downloading the GloVe files, then parse them, load the word vectors into a [`Keras Embedding`](https://keras.io/api/layers/core_layers/embedding/) layer, and then finally build a new model that uses it.
+Compared to one-hot vectors that are typically sparse, high-dimensional, and inefficient to use, word embeddings significantly improve the overall quality of the word representations and, consequently, the learning algorithm. 
 
-**Download GloVe embeddings**
+So, in the next few steps, you'll download and use the GloVe word embeddings, then parse them, load the word vectors into a [`Keras Embedding`](https://keras.io/api/layers/core_layers/embedding/) layer, and then finally build a new model that uses it.
 
 ```bash
 !wget http:/ /nlp.stanford.edu/data/glove.6B.zip
 !unzip -q glove.6B.zip
 ```
-**Parse the GloVe word-embeddings file**
+
+
+### Step 5: Parse the GloVe word-embeddings file
 
 ```python
 import numpy as np
-path_to_glove_file = "glove.6B.100d.txt" 
-  
+path_to_glove_file = "glove.6B.100d.txt"
+
 embeddings_index = {} 
 with open(path_to_glove_file) as f:
     for line in f:
         word, coefs = line.split(maxsplit=1)
         coefs = np.fromstring(coefs, "f", sep=" ")
+
+        # Builds an index that maps words (as strings) to their vector representations
         embeddings_index[word] = coefs
 ```
 
-**Prepare the GloVe word-embeddings matrix**
+
+### Step 6: Prepare the GloVe word-embeddings matrix
 
 ```python
+from tensorflow.keras import layers
+max_length = 600
+max_tokens = 20000
 embedding_dim = 100 
-  
-vocabulary = text_vectorization.get_vocabulary()             
-word_index = dict(zip(vocabulary, range(len(vocabulary))))   
- 
-embedding_matrix = np.zeros((max_tokens, embedding_dim))     
+
+# Here, the input reviews are truncated after 600 words since only 5% reviews are longer than 600 words
+text_vectorization = layers.TextVectorization(max_tokens=max_tokens, output_sequence_length=max_length)
+
+# Get the vocabulary indexed by the TextVectorization layer
+vocabulary = text_vectorization.get_vocabulary()
+
+# Create a mapping from words to their index in the vocabulary
+word_index = dict(zip(vocabulary, range(len(vocabulary))))
+
+# Matrix that you'll fill GloVe vectors in
+embedding_matrix = np.zeros((max_tokens, embedding_dim))
 for word, i in word_index.items():
     if i < max_tokens:
         embedding_vector = embeddings_index.get(word)
-    if embedding_vector is not None:                         
-        embedding_matrix[i] = embedding_vector    
+    if embedding_vector is not None:
+        embedding_matrix[i] = embedding_vector
 ```
 
 
-### Step 5: Use Positional Embeddings as a subclassed layer
+### Step 7: Use positional embeddings
 
-Unlike embeddings, positional encodings give the model access to word-order information by adding the word's position in the sentence to each word embedding.
+Unlike word embeddings, positional encodings give the model access to word-order information by adding to each word embedding the word's position in the sentence. This causes the input word embeddings to have two components: the usual word vector that represents the word independent of any context, and the position vector, that represents the position of the word in the current sentence.
 
-Based on the original ["Attention is all you need" Transformer](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) paper, you will proceed to add the position embeddings to the corresponding word embeddings, to obtain a position-aware word embedding. This technique is called “positional embedding".
+You'll add the position embeddings to the corresponding word embeddings, to obtain a position-aware word embeddings, also called positional embeddings.
 
 ```python
 class PositionalEmbedding(layers.Layer):
     def __init__(self, sequence_length, input_dim, output_dim, **kwargs):  
         super().__init__(**kwargs)
-        self.token_embeddings = layers.Embedding(                          
+
+        # Prepare an embedding layer for the token indices
+        self.token_embeddings = layers.Embedding(
             input_dim=input_dim, output_dim=output_dim)
         self.position_embeddings = layers.Embedding(
-            input_dim=sequence_length, output_dim=output_dim)              
+            input_dim=sequence_length, output_dim=output_dim)
         self.sequence_length = sequence_length
         self.input_dim = input_dim
         self.output_dim = output_dim
@@ -190,12 +191,16 @@ class PositionalEmbedding(layers.Layer):
         positions = tf.range(start=0, limit=length, delta=1)
         embedded_tokens = self.token_embeddings(inputs)
         embedded_positions = self.position_embeddings(positions)
-        return embedded_tokens + embedded_positions                        
- 
-    def compute_mask(self, inputs, mask=None):                             
-        return tf.math.not_equal(inputs, 0)                                
- 
-    def get_config(self):                                                  
+
+        # Add both embedding vectors together
+        return embedded_tokens + embedded_positions
+
+    # Masking takes care of zeros padded to inputs in a batch
+    def compute_mask(self, inputs, mask=None):
+        return tf.math.not_equal(inputs, 0)
+
+    # Serialization so we can save the model
+    def get_config(self):
         config = super().get_config()
         config.update({
             "output_dim": self.output_dim,
@@ -205,7 +210,47 @@ class PositionalEmbedding(layers.Layer):
         return config
 ```
 
-### Step 6: Design the `TransformerDecoder`
+### Step 8: Design the Transformer encoder
+
+```python
+from tensorflow.keras import layers
+
+class TransformerEncoder(layers.Layer):
+    def __init__(self, embed_dim, dense_dim, num_heads, **kwargs):
+        super().__init__(**kwargs)
+        
+        # size of the input token vectors
+        self.embed_dim = embed_dim
+        # size of the inner dense layer
+        self.dense_dim = dense_dim
+        # number of attention heads
+        self.num_heads = num_heads
+        
+        self.attention = layers.MultiHeadAttention(num_heads=num_heads, key_dim=embed_dim)
+        self.dense_proj = keras.Sequential([layers.Dense(dense_dim, activation="relu"), layers.Dense(emed_dim), ])
+        self.layernorm_1 = layers.LayerNormalization()
+        self.layernorm_2 = layers.LayerNormalization()
+    
+    def call(self, inputs, mask=None):
+        if mask is not None:
+            mask = mask[:, tf.newaxis:1]
+        attention_output = self.attention(inputs, inputs, attention_mask=mask)
+        proj_input = self.layernorm_1(inputs+attention_output)
+        proj_output = self.dense_proj(proj_input)
+        return self.layernorm_2(proj_input+proj_output)
+    
+    def get_config(self):
+        config = super().get_config()
+        config.update({
+            "embed_dim": self.embed_dim
+            "dense_dim": self.dense_dim
+            "num_heads": self.num_heads
+        })
+        return config
+```
+
+
+### Step 9: Design the Transformer decoder
 
 The `TransformerDecoder` is similar to the `TransformerEncoder`, except it features an additional attention block where the keys and values are the source sequence encoded by the `TransformerEncoder`, as shown below. Together, the encoder and the decoder form an end-to-end Transformer.
 
@@ -292,9 +337,9 @@ def call(self, inputs, encoder_outputs, mask=None):
 ```
 
 
-### Step 7: Run the Transformer!
+### Step 10: Run the Transformer
 
-Finally, it's time to perform some translation!
+Finally, it's time to perform some translation.
 
 ```python
 embed_dim = 256 
@@ -303,8 +348,7 @@ num_heads = 8
   
 encoder_inputs = keras.Input(shape=(None,), dtype="int64", name="english")
 x = PositionalEmbedding(sequence_length, vocab_size, embed_dim)(encoder_inputs)
-encoder_outputs = TransformerEncoder(embed_dim, dense_dim, num_heads)(x)     
- 
+encoder_outputs = TransformerEncoder(embed_dim, dense_dim, num_heads)(x)
 decoder_inputs = keras.Input(shape=(None,), dtype="int64", name="spanish")
 x = PositionalEmbedding(sequence_length, vocab_size, embed_dim)(decoder_inputs)
 x = TransformerDecoder(embed_dim, dense_dim, num_heads)(x, encoder_outputs)  
@@ -319,7 +363,7 @@ transformer.compile(
 transformer.fit(train_ds, epochs=30, validation_data=val_ds)
 ```
 
-### Step 8: Translate New Sentences!
+### Step 11: Translate new sentences
 
 Now, try using the model you just trained to translate never-seen-before English sentences from the test set.
 
@@ -352,11 +396,7 @@ for _ in range(20):
     print(decode_sequence(input_sentence))
 ```
 
-
-## Results
-
-When I ran this model and sampled some results from the Transformer translation model, these are the results I get:
-
+After the run is complete, sample some results from the Transformer translation model, which could be similar to:
 
 > This is a song I learned when I was a kid.  
 > [start] esta es una canción que aprendí cuando era chico [end]    
@@ -371,15 +411,9 @@ When I ran this model and sampled some results from the Transformer translation 
 >[start] puede que llueve un poco el pasado [end]
 
 
-**Key Observations**
+> **IMPORTANT**
+>* Translation models often make unwarranted assumptions about their input data, which leads to ***algorithmic bias***. 
+>* In the worst cases, the model might hallucinate memorized information that has nothing to do with the data it’s currently processing.
 
-* While the source sentence wasn’t gendered, this translation assumes a male speaker. 
-* Keep in mind that translation models will often make unwarranted assumptions about their input data, which leads to ***algorithmic bias***. 
-* In the worst cases, a model might hallucinate memorized information that has nothing to do with the data it’s currently processing.
-
-
-## Further Reading
-
-Congratulations on successfully translating English to Spanish sentences using the Transformer model! 
 
 Check out the [How Do Transformers Work?](Important%20Concepts.md) section if you are still curious about Transformers and would like to learn more about these models.
