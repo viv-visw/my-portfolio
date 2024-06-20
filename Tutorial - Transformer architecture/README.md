@@ -12,10 +12,11 @@ This documentation describes the [Transformer model](The%20Transformer%20Model/R
 
 The following sections provide more information on how these models function, how they are used, and relevant resources for further reading:
 
-- [Getting Started](The%20Transformer%20Model/Getting%20Started.md)
-- [How-To Guides](The%20Transformer%20Model/How%20to%20use%20Transformers%20for%20Translation.md)
-- [Important Concepts](The%20Transformer%20Model/Important%20Concepts.md)
-- [References and Further Reading](The%20Transformer%20Model/References%20and%20Further%20Reading.md)
+- [Prerequisites](The%20Transformer%20Model/prerequisites.md)
+- [Getting Started](The%20Transformer%20Model/getting-started.md)
+- [How-To Guides](The%20Transformer%20Model/how-to-use-transformers-for-translation.md)
+- [Important Concepts](The%20Transformer%20Model/important-concepts.md)
+- [References and Further Reading](The%20Transformer%20Model/references-and-further-reading.md)
 
 
 ## Author Notes
