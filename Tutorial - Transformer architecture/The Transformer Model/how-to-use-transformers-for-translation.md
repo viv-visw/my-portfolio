@@ -416,4 +416,4 @@ After the run is complete, sample some results from the Transformer translation 
 >* In the worst cases, the model might hallucinate memorized information that has nothing to do with the data it’s currently processing.
 
 
-Check out the [How Do Transformers Work?](Important%20Concepts.md) section if you are still curious about Transformers and would like to learn more about these models.
+Check out the [How Do Transformers Work?](important-concepts.md) section if you are still curious about Transformers and would like to learn more about these models.
