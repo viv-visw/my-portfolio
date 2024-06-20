@@ -6,7 +6,6 @@
 | Topics | Links |
 | :-----:| :-----:| 
 | Overview| [Overview](#overview) |
-| Prerequisites | [Prerequisites](#prerequisites) |
 | Revisiting Attention Models| [Revisiting Attention Models](#revisiting-attention-models) | 
 | The Transformer Model | [Transformers](#the-transformer) |
 | How Do Transformers Work | [How Transformers Work](#how-do-transformers-work) |
@@ -92,7 +91,7 @@ where both `v` and `W` are weight matrices to be learned in the alignment model.
 
 ## The Transformer 
 
-The [Transformer model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf), was published in 2017 by researchers at Google and the University of Toronto, Canada. It enabled seq2seq modeling without using recurrent network units, since the Transformer model is built on the [self-attention mechanism](#self-attention-without-rnns) without using sequence-aligned recurrent units. 
+The [Transformer model](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) was published in 2017 by researchers at Google and the University of Toronto, Canada. It enabled seq2seq modeling without using recurrent network units, since the Transformer model is built on the [self-attention mechanism](#self-attention-without-rnns) without using sequence-aligned recurrent units. 
 
 In the following sections, we will look at the critical building blocks that constitute the Transformer architecture.
 
