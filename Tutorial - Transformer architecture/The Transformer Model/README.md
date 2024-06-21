@@ -36,7 +36,7 @@ This documentation is meant for you, if you're trying to understand:
 
 ## Prerequisites
 
-This documentation assumes you understand:
+Since this documentation covers an advanced topic in deep learning, it assumes you understand:
 
 * foundational concepts in machine learning and deep learning, especially:
 
